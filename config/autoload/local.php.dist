@@ -13,8 +13,6 @@
 
 return array(
     'db' => array(
-        'username' => 'root',
-        'password' => 'ujkjdrj',
         'charset'  => "utf8",
     ),
 );
