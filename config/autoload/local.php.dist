@@ -14,5 +14,7 @@
 return array(
     'db' => array(
         'charset'  => "utf8",
+        'username' => 'root',
+        'password' => 'ujkjdrj'
     ),
 );
