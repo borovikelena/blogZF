@@ -7,10 +7,10 @@ use Blog\Form\ArticleForm;
  
 class BlogController extends AbstractActionController
 {
-   
-    public function indexAction()
+
+   public function indexAction()
     {
-         $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+        $objectManager = $this->getServiceLocator()->get('Doctrine\ORM\EntityManager');
  
         $articles = $objectManager
         ->getRepository('\Blog\Entity\Article')

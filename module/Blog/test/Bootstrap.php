@@ -1,6 +1,6 @@
 <?php
 namespace BlogTest;//Change this namespace for your test
- 
+
 use Zend\Loader\AutoloaderFactory;
 use Zend\Mvc\Service\ServiceManagerConfig;
 use Zend\ServiceManager\ServiceManager;
@@ -86,7 +86,7 @@ class Bootstrap
         }
  
         AutoloaderFactory::factory(array(
-            'ZendLoaderStandardAutoloader' => array(
+            'Zend\Loader\StandardAutoloader' => array(
                 'autoregister_zf' => true,
                 'namespaces' => array(
                     __NAMESPACE__ => __DIR__ . '/' . __NAMESPACE__,

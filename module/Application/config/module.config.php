@@ -100,6 +100,7 @@ return array(
         ),
     ),
 
+
     /* 'view_helpers' => array(
       'invokables' => array(
          'formCollection' => 'Application\View\Helper\FormCollection',
