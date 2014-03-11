@@ -1,0 +1,30 @@
+﻿<?php
+    echo $this->showMessages();
+?>
+
+<?php foreach($this->articles as $article):?>
+<div>
+<a href="<?php  echo $this->url('blog', array('action'=>'view', 'id' => $article->getId())) ?>">
+<?php echo $article->getTitle() ?> </a>
+</div>
+<br/>
+<div>
+<?php echo $article->getDescription(); ?> 
+</div>
+<div>
+[ <?php echo  $article->getDate();?>], <?php echo $article->getAuthor();?> 
+</div>
+<div>
+<?php if ($this->isAllowed('controller/Blog\Controller\Blog:edit')):?>
+<a href="<?php echo $this->url('blog', array('action'=>'edit', 'id' => $article->getId()));?>">edit</a>
+<?php endif;?>
+<?php if ($this->isAllowed('controller/Blog\Controller\Blog:delete')):?>
+<a href="<?php echo $this->url('blog', array('action'=>'delete', 'id' => $article->getId()));?>">delete</a>
+<?php endif;?>
+</div>
+<br/>
+<br/>
+<?php endforeach;?>
+<?php if ($this->isAllowed('controller/Blog\Controller\Blog:add')):?>
+<a href="<?php echo $this->url('blog', array('action'=>'add'));?>">Add new article</a>
+<?php endif;?>
